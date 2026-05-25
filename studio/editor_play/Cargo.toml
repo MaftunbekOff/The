@@ -1,0 +1,19 @@
+[package]
+name = "twelfth_editor_play"
+version = "0.1.0"
+edition = "2024"
+description = "Bevy runtime for editor-exported visual_blueprint!"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+bevy = { path = "../..", default-features = true }
+twelfth_visual_blueprint = { path = "../visual_blueprint" }
+visual_blueprint_macros = { path = "../visual_blueprint_macros" }
+
+[[bin]]
+name = "play"
+path = "src/main.rs"

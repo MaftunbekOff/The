@@ -1,0 +1,32 @@
+[package]
+name = "twelfth_visual_blueprint"
+version = "0.1.0"
+edition = "2024"
+description = "Pure Rust visual script data layer (components, AST, validation)"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lints]
+workspace = true
+
+[features]
+default = ["bevy"]
+bevy = ["dep:bevy"]
+serde = ["dep:serde"]
+
+[dependencies]
+bevy = { path = "../..", optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+
+[dev-dependencies]
+visual_blueprint_macros = { path = "../visual_blueprint_macros" }
+
+[[example]]
+name = "treasury_demo"
+path = "examples/treasury_demo.rs"
+required-features = ["bevy"]
+
+[[example]]
+name = "branch_demo"
+path = "examples/branch_demo.rs"
+required-features = ["bevy"]

@@ -1,0 +1,22 @@
+[package]
+name = "visual_blueprint_macros"
+version = "0.1.0"
+edition = "2024"
+description = "visual_blueprint! — compile-time Bevy system factory (no data storage)"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lib]
+proc-macro = true
+
+[lints]
+workspace = true
+
+[dependencies]
+twelfth_visual_blueprint = { path = "../visual_blueprint", default-features = false }
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = ["full"] }
+
+[dev-dependencies]
+twelfth_visual_blueprint = { path = "../visual_blueprint", default-features = false }

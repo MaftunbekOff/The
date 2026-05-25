@@ -1,0 +1,17 @@
+[package]
+name = "The"
+version = "0.0.1"
+edition = "2024"
+description = "Twelfth Hybrid Engine — studio plugins on Bevy (not upstream)"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+bevy = { path = "..", default-features = true }
+
+[[bin]]
+name = "hello_The"
+path = "src/bin/hello_The.rs"

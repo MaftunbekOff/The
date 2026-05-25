@@ -1,0 +1,20 @@
+[package]
+name = "twelfth_editor"
+version = "0.1.0"
+edition = "2024"
+description = "Twelfth dev editor — blueprint canvas → compile-time export"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+bevy = { path = "../..", default-features = true }
+twelfth_visual_blueprint = { path = "../visual_blueprint", default-features = false, features = ["bevy", "serde"] }
+ron = "0.8"
+serde = { version = "1", features = ["derive"] }
+
+[[bin]]
+name = "dev_editor"
+path = "src/main.rs"

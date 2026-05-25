@@ -40,6 +40,13 @@ members = [
   "benches",
   # Internal tools that are not published.
   "tools/*",
+  # Twelfth Hybrid Engine — `The` crate at studio/ (not Bevy upstream). See studio/README.md.
+  "studio",
+  "studio/editor",
+  "studio/editor_play",
+  "studio/vm",
+  "studio/visual_blueprint",
+  "studio/visual_blueprint_macros",
   # Bevy's error codes. This is a crate so we can automatically check all of the code blocks.
   "errors",
 ]
